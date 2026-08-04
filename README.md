@@ -4,6 +4,18 @@ A REST API for managing personal expenses: add, list, filter by category,
 delete, and total up spending (overall and per category), plus search by
 title (bonus feature).
 
+## Features
+
+- Add, view and delete expenses
+- Filter expenses by category
+- Search expenses by title (bonus)
+- Calculate overall expenses
+- Calculate category-wise expense totals
+- JSON-based persistent storage
+- Automatic API documentation using Swagger
+- Unit tests using pytest
+
+  
 ## Stack
 
 - **Python 3.10+** with **FastAPI** + **Pydantic v2** for the API and
@@ -14,11 +26,18 @@ title (bonus feature).
   (`data/expenses.json`) after every write, so data survives a server
   restart. No database.
 
+## Design Decisions
+
+- Built using FastAPI for automatic request validation and Swagger documentation.
+- Used UUIDs as expense identifiers to ensure uniqueness.
+- Stored data in a local JSON file instead of a database, as allowed by the assignment.
+- Separated API routes, models, and storage logic for better maintainability.
+  
 ## Install
 
 ```bash
-git clone <this-repo-url>
-cd expense-tracker
+git clone https://github.com/Shreyas-135/Expense-Tracker.git
+cd Expense-Tracker
 python3 -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -135,3 +154,7 @@ expense-tracker/
 - Amount is stored as a `float` rounded to 2 decimals; for real currency
   handling you'd want `Decimal` end-to-end, which felt like overkill for the
   scope of this exercise.
+
+## AI Usage
+
+AI tools (ChatGPT and Claude) were used during development to accelerate implementation and generate boilerplate code. All generated code was reviewed, tested, and modified where necessary before submission. Additional details are available in `AI_NOTES.md`.
