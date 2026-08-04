@@ -1,8 +1,5 @@
 """
 Personal Expense Tracker API (FastAPI).
-
-Run with:  uvicorn src.main:app --reload
-Docs at:   http://127.0.0.1:8000/docs  (Swagger UI, auto-generated bonus)
 """
 from typing import Dict, List, Optional
 
