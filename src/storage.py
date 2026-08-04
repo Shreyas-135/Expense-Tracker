@@ -1,11 +1,4 @@
-"""
-In-memory expense storage with JSON-file persistence.
 
-Data lives in memory (a dict keyed by id) for fast reads. Every mutation
-(add/delete) is immediately flushed to a JSON file on disk, so restarting
-the server does not lose data. A lock guards mutations since uvicorn can
-serve requests from multiple threads/workers.
-"""
 import json
 import threading
 import uuid
