@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/expenses.json
+venv/
+.venv/
+.pytest_cache/
